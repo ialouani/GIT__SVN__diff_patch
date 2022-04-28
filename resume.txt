@@ -64,4 +64,9 @@ Le patch etant pres: patch_real2.
 fin_resume__etapes PRECEDENTES.
 A CONCLURE POUR LA __suite__::: diff -rupN -x .git -x build_?? ()..()'-x-><-number' original new > rslt_patch.print_ ou rslt_patch tout simple.
 ->REVENONS A LEXO7:
+MAIS<<: parfois, il faut bien examiner les cas car l'application ulterieure du patch CE QUI EST L'objet de cet exo pose des problemes de post-configuration().
+=>DETAILS.
+Rq:
+LE prof a precise qu'il a pu transporter la machine a etats sans toucher aux fonctionnalitées cad. les fonctions proposees ce qui est vraiment l'OBJECTIF d'une machine a etats.
+=>=>=>REPRENONS PLUS EN **PROFONDEUR** l'exo7:
 
