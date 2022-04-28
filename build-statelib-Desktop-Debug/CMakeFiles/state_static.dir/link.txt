@@ -1,0 +1,2 @@
+/usr/bin/ar cr libstate_static.a  CMakeFiles/state_static.dir/src/state.c.o
+/usr/bin/ranlib libstate_static.a

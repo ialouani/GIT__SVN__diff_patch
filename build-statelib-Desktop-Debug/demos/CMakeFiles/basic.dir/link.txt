@@ -1,0 +1,1 @@
+/usr/bin/gcc  -g    CMakeFiles/basic.dir/basic.c.o  -o basic -rdynamic ../libstate.so -Wl,-rpath,/home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/build-statelib-Desktop-Debug 

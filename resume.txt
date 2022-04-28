@@ -106,5 +106,118 @@ rq:
 git diff -r| par rapport a la branche actuelle seulement!!!
 cp ~/T(tab)<é.. ./ puis gunzip patch.print_.gz
 puis reprendre la demarche qui a ete bien tres bien detaille voir meme ci-dessus.
-Petit probleme a documenter et en passe a la partie 3:
-->
+Petit probleme a documenter et en passe a la partie 3:(-N: lister un nouveaufichier en integrite)
+ATTENTION: flags pour generer un patch et attention au fichier .rej...
+&& -p1 pour ignorer le 1er element du chercheur depuis le patch sinon erreur.
+On doit LUI DIRE qu'il faut appliquer le patch suivant nn/demos/.. et voila!
+sortie de patch < ../patch_number par exemple rien faire sinon rej qui veut certainement dire(pas important) qu'on applique le patch en bouleversant l'etat des executions globaux par un cmakelists .rej qui veut dire skip patch precedent et applique le quoi qu'il en soit(les lignes principaux) vu que la cible n'est pas la meme le fichier genere est de ce type..
+Un build present presente a 90% les memes problemes/***********************
+Une non specification de la profondeur depuis les debuts des sous patch genere la meme erreur ilattend un y tout long va generer les sources direct avec le symbole .rej pour des raisons de securite soit disant(cmakelists lui aussi touche dans les sous repertoires demos par exemple pour lexo suivant qui fait un melange gracieux de repertoirs non compatibles).
+FIN_REMARQUES.
+->exo8:
+conseils: faire des copies sans build appliquer le patch sur les bons repertoires depuis le demandeur avec -p1 si on est en entree et faire des -x sur les .git eventuellement d'autres fichiers doc(Doxyfile.in) pour que diff -rupN maitre de generationde patch ne pause pas probleme lors de l'applciation(pas trop de donneees a traiter) et ce qui est important: verifier tjrs avec diff -r et l'entier repertoir de github avant un commit avec git diff -r quidonnera pas grand chose.. a append c cancelled pour bien decrypter les messages.
+DERNIER CONSEIL: le but d'un diff cest de pouvoir l'appliquer, la elcture specifique de chaque ligne est libre et le patch genere en est important et comment l'appliquer aussi.
+>supprimer le build2 build dans une copie de statelib supprimera le contenu de doc et evitera de chercher dans man git quelle option pour ignorer le repertoir doc meme si on l'a: -x (car .git est un folder non pas un fichier comme ~/.bashrc) et donc:
+>>cp -r statelib statelib3_test + reprendre la faute pour en generer un meme patch(meme nom+meme commandes)
+>>>maintenant, concentrons-nous sur le pathc_print.gz::
+il contient un state print en plus pour la librairie courante.
++possiblite de dynamisme en terme de libraries dans le cmakelists principle.
++ajout de print_state__machine(dans le main avant le restart)
++l'implementationTOUT EN BAS CEST CLAIR. (ca list tout ~comme on a affirme avant)
++derniere chose: start=p->to comme mac en parametre et macro linux pour inclure un header.
+++de choses bien sur mais en resume:
+a)debut de dynamisme.(chargement dynamique peut etre prevue)
+b)implementation de la fonction qui imprime la machine a etats en courants(s!!)
+c)specifications ajoutees non presentes le dernier + rejoint l'avant dernier.
+=>necessite de bien lire les diff -rupN surtout car ca apporte le max. de donnees maniables flexiblement.
+A reprendre apres l'application de patch.print_ avant de passer a la suite..
+REPRISE RAPIDE:
+statelib2 => statelib2_patched en copie cad. statelib<->statelib2(build/build2 sautent): (avec statelib_new2 copie de statelib_new (on supprime tous les build avec diff -rupN -x .git pour la generation du patch et diff -r pour comparer le resultanr=t(original/new avec new ;build3 aussi))) donne statelib2_patched patch avec une copie statelib_new2_patched donne rien.(<=>patch de (diff -rupN precisement) de statelib_new2 et de statelib_new2_patched puis application du patch depuis statelib_new2_patched).//////
+REVENONS A LEXO IMPORTANT:
+DISCUTONS SUR LE PIEGE ICI::
+
+
+
+
+
+
+
+
+
+**********************************************************************************************
+**********************************************************************************************
+**********************************************************************************************
+3.>GIT: commit/status/avant add puis status/log(origin/master -> origin/HEAD depuis le proprietaire machine depot statelib(allali))/git reset HEAD~1..HEAD/git commit -m -a <=> git add * puis git push
+-tout ca on le sait.
+LE NOUVEAU:
+EXO10/11:
+facile;; resume rapide:->
+
+
+
+
+EXO11:(le coeur de l'histoire)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**********************************************************************************************
+**********************************************************************************************
+**********************************************************************************************
+**********************************************************************************************
+**********************************************************************************************
+**********************************************************************************************
+EXO12: qtcreator avec build-statelib-Desktop-Debug ouvre avec la copie depuis statelib_all_1_sur_2''(()) => changement pris en compte avec save puis modification de la branche locale de ce repertoir inclut diff (pas necessairement git) puis tools(outils) puis depot local(local repository) diff (on l'a fait c'est l'essentiel) affiche tout bien en graphique. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FIN TD_6.
+
