@@ -69,4 +69,20 @@ MAIS<<: parfois, il faut bien examiner les cas car l'application ulterieure du p
 Rq:
 LE prof a precise qu'il a pu transporter la machine a etats sans toucher aux fonctionnalitées cad. les fonctions proposees ce qui est vraiment l'OBJECTIF d'une machine a etats.
 =>=>=>REPRENONS PLUS EN **PROFONDEUR** l'exo7:
+creation d'une copie de statelib en statelib2
+PUIS: diff -rupN (u:context&p:functions&r:recursivite en recherche & comparaison des ajouts && N END for generating the main line codes for the patch_number) statelib2 statelib_new2 (copie de ce dernier aussi apres AVOIR SUPPRIMER TOUT LES REPERTOIRS BUILD) avec les flags::²
+                       -x .git -x build(comme rm -r''f'') 
+                          >patch_number.
+PUIS: cd statelib2_patched copie de statelib2 sans le build commeon a dit avant puis:
+patch < ../patch_games avec l'option !!!!!!!!!!!!!!-p1-----------------(voir commit comment's).
+!!!!!!!!!!!!!!!!!!!!!!!!!!
+application et repertoriation des modifications puis diff -r => difference au niveau des .git seulement cat -x .git les a sautées.(pas besoin car pas acces(bloqué pas de repository contenant celui-ci) pour y acceder donc le .git on s'en fiche)
+&& les cmakelists.txt.??? sont totalement exclus car: tout simplement::
+-p1 avec ++++++++++++++++++++++++build sans ne fait rien meme les executables de 'sortie' de doc sont sautées(voir td precedent).
+FIN___EXO7.
+**********
+*******************
+*******************************************
+EXO8:(a present)
+=>debut_exo__8;;;
 
