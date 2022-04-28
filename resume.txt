@@ -86,6 +86,15 @@ FIN___EXO7.
 EXO8:(a present)
 =>debut_exo__8;;;
 "" diff -rupN -x .git statelib2_patched/ statelib2_patched/
-ne donne rien apres cela (rq a l'avant). ""
->
+ne donne rien apres cela (rq a l'avant). "" &!:::
+diff -r statelib_new2 statelib2_patched/
+Les fichiers binaires statelib_new2/.git/index et statelib2_patched/.git/index sont différents
+&(dernier)en mode nn recursif: 
+diff statelib_new2 statelib2_patched/
+Les sous-répertoires statelib_new2/demos et statelib2_patched/demos sont identiques
+Les sous-répertoires statelib_new2/doc et statelib2_patched/doc sont identiques
+Les sous-répertoires statelib_new2/.git et statelib2_patched/.git sont identiques
+Les sous-répertoires statelib_new2/src et statelib2_patched/src sont identiques
+>pas de comparaison de fond.(.git est lui aussi copie bien evidemment: commande cp -r)
 >>
+DEBUT:
