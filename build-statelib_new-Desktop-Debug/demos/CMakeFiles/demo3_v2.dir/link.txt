@@ -1,0 +1,1 @@
+/usr/bin/gcc  -g    CMakeFiles/demo3_v2.dir/game1__2.c.o  -o demo3_v2 -rdynamic ../libstate.so -Wl,-rpath,/home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/build-statelib_new-Desktop-Debug 
