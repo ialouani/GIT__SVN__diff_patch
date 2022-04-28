@@ -41,13 +41,27 @@ _______________________
 __________________________________EXO5/6: application/observations diverses(../$($$)) de diff-patch (FRAMEWORK<-->principe des egstionnaires de sources=>$$*($$$<<<<<|./&..////²²²²²²))
 EXO5: DIFF
 commandes a reprendre(rappels seulement) avec options si necessaire:
-diff -r
-diff -y
+diff -r(git diff au debut sur le repository personnel de github)
+diff -y(en mode parallele + details sous que faire documentation state.h par exemple
++les repertoirs non pas de recherche recursif si ajout complet contrairement a src=>break
+=>documentation sur state.h..) ne sert pas a grand chose.<=>~-++diff -r.
 diff
 diff -rupN
 diff -r -x .git build(exemple) original new
 diff -ru -x .git -x ...
 jusqu'a diff -rupN -x .git -x build ...
-(details: diff -r -x .git -x ('file') original new)
+RQ: les options r/ru/rup ne donnent pas grand choses mais permettent de mieux visualiser les trucs=>l'ajout de N est fondamental.(tenant compte des -x ?? pour que l'ensemble #??# ne soit pas lui aussi analyse par rapport a l'ajout des lignes du second image importe cp -R muis mv puis modifiees)
+(details: diff -r -x .git -x ('file') original new) VOIR PLUS BAS.
 EXO6: patch(de meme => procedure de l'exo precedent(EXO5))
 (probleme=>generationde patch anticipee triviale!(*))
+diff -rupN -x .git ignore en comparaison resursive la presence ou pas des fichiers .git.(la comparaison par exemple pour -x build va pas comparer statelib/build et statelib_new/build cest pour cela il est recommande de faire les build a l'EXTERIEUR mais le readme initial imposait une construction conforme au CMakeLists se retrouvant dans demos par exemple pour link_directories donc on se confie a la documentation car meme si on modifie tout on peut pas COMMITER)
+=>on genere au lieu de patch_number le patch2_real.
+**********************-------------------------------------------------------------
+EXO7:
+Resume: pour faire un patch on utilise uniquement les options diff -rupN original new > patch_`${second_patch__name}`.
+Le patch etant pres: patch_real2.
+=>comparaison tenu en compte de l'ajout des commentaires dans les fichiers sources headers(contrats) tout au debut + l'ajout d'autres fichiers tests (2) + l'updating du Makefile.
+fin_resume__etapes PRECEDENTES.
+A CONCLURE POUR LA __suite__::: diff -rupN -x .git -x build_?? ()..()'-x-><-number' original new > rslt_patch.print_ ou rslt_patch tout simple.
+->REVENONS A LEXO7:
+
