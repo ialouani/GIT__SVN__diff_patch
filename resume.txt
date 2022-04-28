@@ -133,8 +133,10 @@ c)specifications ajoutees non presentes le dernier + rejoint l'avant dernier.
 A reprendre apres l'application de patch.print_ avant de passer a la suite..
 REPRISE RAPIDE:
 statelib2 => statelib2_patched en copie cad. statelib<->statelib2(build/build2 sautent): (avec statelib_new2 copie de statelib_new (on supprime tous les build avec diff -rupN -x .git pour la generation du patch et diff -r pour comparer le resultanr=t(original/new avec new ;build3 aussi))) donne statelib2_patched patch avec une copie statelib_new2_patched donne rien.(<=>patch de (diff -rupN precisement) de statelib_new2 et de statelib_new2_patched puis application du patch depuis statelib_new2_patched).//////
+DERNIERE REMARQUE SUR LA REPRISE: un travail parallele+un patch at all fait le boulot attendu un diff -r par exemple sur une copie externe et sur le copie modifiee just in time(())²²²²   fait la sortie voulue(aucune chose sauf le .git qu'on peut ignorer avec -x git).
 REVENONS A LEXO IMPORTANT:
 DISCUTONS SUR LE PIEGE ICI::
+ce patch contient une modification du CMakeLists.txt qui pose enormement de problemes, ainsi qu'une implementation d'une fonction avant le restart de print les states de la machine avec centrage sur le state courant. la lecture de diff ne doit pas approfondue. L'application par contre du patch et ses repercussions via la visualisation du diff -r est le primordial et notre priorite ici.
 
 
 
