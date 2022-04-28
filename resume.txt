@@ -38,7 +38,7 @@ et depuis statelib_new on fait un cd build3 && cmake -DCMAKE_INSTALL_PREFIX:PATH
 ==>on execute les programmes (**)=>TOUT MARCHE.
 FIN EXO4: modifications.
 _______________________
-__________________________________EXO5/6: application/observations diverses(../$($$)) de diff-patch (FRAMEWORK<-->principe des egstionnaires de sources)
+__________________________________EXO5/6: application/observations diverses(../$($$)) de diff-patch (FRAMEWORK<-->principe des egstionnaires de sources=>$$*($$$<<<<<|./&..////²²²²²²))
 EXO5: DIFF
 commandes a reprendre(rappels seulement) avec options si necessaire:
 diff -r
@@ -50,4 +50,4 @@ diff -ru -x .git -x ...
 jusqu'a diff -rupN -x .git -x build ...
 (details: diff -r -x .git -x ('file') original new)
 EXO6: patch(de meme => procedure de l'exo precedent(EXO5))
-=>
+(probleme=>generationde patch anticipee triviale!(*))
