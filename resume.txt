@@ -137,6 +137,7 @@ DERNIERE REMARQUE SUR LA REPRISE: un travail parallele+un patch at all fait le b
 REVENONS A LEXO IMPORTANT:
 DISCUTONS SUR LE PIEGE ICI::
 ce patch contient une modification du CMakeLists.txt qui pose enormement de problemes, ainsi qu'une implementation d'une fonction avant le restart de print les states de la machine avec centrage sur le state courant. la lecture de diff ne doit pas approfondue. L'application par contre du patch et ses repercussions via la visualisation du diff -r est le primordial et notre priorite ici.
+/*/*
 
 
 
@@ -144,8 +145,7 @@ ce patch contient une modification du CMakeLists.txt qui pose enormement de prob
 
 
 
-
-
+*/*/
 **********************************************************************************************
 **********************************************************************************************
 **********************************************************************************************
@@ -154,10 +154,12 @@ ce patch contient une modification du CMakeLists.txt qui pose enormement de prob
 LE NOUVEAU:
 EXO10/11:
 facile;; resume rapide:->
+/*/*
 
 
 
 
+/*/*
 EXO11:(le coeur de l'histoire)
 
 
@@ -210,16 +212,4 @@ EXO12: qtcreator avec build-statelib-Desktop-Debug ouvre avec la copie depuis st
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 FIN TD_6.
-
