@@ -1,0 +1,52 @@
+GIT/SVN/diff-patch :patch.print(sources) apress.//
+1.***********************
+But de la biblio: machines a etats::
+>chaque fonction prend un void* depuis un lancement initial renvoie un int qui indique un saut vers une autre fonction <=> machine a etats.
+..////
+->MIT liscence + auteur: allali.(fichier LISCENCE PAS Readme.md qui decrit ce que fait la bibliotheque avec les conventions + la documentation(comment l'utiliser , ainsi de suite..))
+systeme de gestion de sources: decentralise git.
+NON copyright pour une liscence (+<-### attention ! ;;;)
+------------------------
+mkdir a l'avant puis git clone (deja fait..(<<)).
+systeme de compilation : cmake.(systeme permettant de faire l'out source building (donc .compilation UNIQUEMENT))
+systeme de documentation: doxygen doc/Doxyfile.in non lance comme cmake jusqu'a present c'est normal pas comme notr propre ++release()().
+----------------------------------------
+cmake .. && make && demos/demo_menu+''<<<|>><<||||demo_basic.
+make install cree probleme sans indication de ou on doit installer (a l'exterieur peut etre /usr c'est mieux).
+=>rm -rf * build && cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME/usr
+=>on relance: cmake avec l'option puis make puis make install.
+=>=>repercusions immediates sur ~/Bureau/usr_install_2 (tests+).
+=>make donc aussi depuis build puis firefox doc/html/index.html.
+tout est bien(autre cote aussi~+).
+RQ:
+ON PEUT faire cmake avec cette option direct ca va faire le make avant + l'installation de include lib dans $HOME(~)/usr apres make install mais make doc nn.
+sudo make install est l'unique choix pour faire un run sans erreur car ca copie les fichiers dans /usr/local/include(.h) && /usr/local/lib(les biblios dynamiques dela libc utilisees instinctivement par GCC.)
+------------------------------------------------------------------
+
+2:*********************(diff/patch)
+changer la documentation state_start par exemple=>tjrs (90%)voir ateliers_projets fichiers dispos d'origines (initial commit) .h
+=>cd depuis cp -r statelib statelib_new puis cd bon folder puis cd src puis cat state.h pour voir.
+rq:(install)******************
+TARGETS DESTINITATION dans install() le fichier cmake.txt renvoie le repertoir par defaut a choisir eventuellement cest pour cela qu'on ajoute l'option fondamentale a ne pas oublier:
+-CMAKE_INSTALL_PREFIX:PATH=$HOME/usr pour une installation dans ~/usr. (ou bien sudo make install comme ca l'ajout avec <> ne posera pas de problemes..)
+revenir a l'exo4:
+tout a ete fait, les exemples ont ete bien traites pour choisir la tres bonne proche(bonne!!) implementation de game1__2 && searching_number__game => demo/demo3 && demo/demo3_v2 via le CMakeLists dans le folder (**)demos(build :../ terminal.///)::
+ +aadd_executable(.. ..)//classique
+ ++target_link_libraries(executable$''```` ${STATE_LIBRARIES}).
+et depuis statelib_new on fait un cd build3 && cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME .. && make && make doc 
+=>on visualise le :>(sortie) $(firefox ''./doc/html/index.html'') qst1/2
+==>on execute les programmes (**)=>TOUT MARCHE.
+FIN EXO4: modifications.
+_______________________
+__________________________________EXO5/6: application/observations diverses(../$($$)) de diff-patch (FRAMEWORK<-->principe des egstionnaires de sources)
+EXO5: DIFF
+commandes a reprendre(rappels seulement) avec options si necessaire:
+diff -r
+diff -y
+diff
+diff -rupN
+diff -r -x .git build(exemple) original new
+diff -ru -x .git -x ...
+jusqu'a diff -rupN -x .git -x build ...
+(details: diff -r -x .git -x ('file') original new)
+EXO6: patch(de meme => procedure de l'exo precedent(EXO5))
