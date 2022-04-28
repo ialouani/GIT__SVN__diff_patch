@@ -96,5 +96,15 @@ Les sous-répertoires statelib_new2/doc et statelib2_patched/doc sont identiques
 Les sous-répertoires statelib_new2/.git et statelib2_patched/.git sont identiques
 Les sous-répertoires statelib_new2/src et statelib2_patched/src sont identiques
 >pas de comparaison de fond.(.git est lui aussi copie bien evidemment: commande cp -r)
+sans OUBLIER:
+diff -r statelib2 statelib2_patched/
+qui visualise les modifications <=> cat ./patch_number presque(100%).////
 >>
 DEBUT:
+>>>>
+rq:
+git diff -r| par rapport a la branche actuelle seulement!!!
+cp ~/T(tab)<é.. ./ puis gunzip patch.print_.gz
+puis reprendre la demarche qui a ete bien tres bien detaille voir meme ci-dessus.
+Petit probleme a documenter et en passe a la partie 3:
+->
