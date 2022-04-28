@@ -85,4 +85,7 @@ FIN___EXO7.
 *******************************************
 EXO8:(a present)
 =>debut_exo__8;;;
-
+"" diff -rupN -x .git statelib2_patched/ statelib2_patched/
+ne donne rien apres cela (rq a l'avant). ""
+>
+>>
