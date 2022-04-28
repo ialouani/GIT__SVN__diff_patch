@@ -138,13 +138,17 @@ REVENONS A LEXO IMPORTANT:
 DISCUTONS SUR LE PIEGE ICI::
 ce patch contient une modification du CMakeLists.txt qui pose enormement de problemes, ainsi qu'une implementation d'une fonction avant le restart de print les states de la machine avec centrage sur le state courant. la lecture de diff ne doit pas approfondue. L'application par contre du patch et ses repercussions via la visualisation du diff -r est le primordial et notre priorite ici.
 /*/*
-
-
-
-
-
-
-
+reprendre la demarche
+<=>less patch.print_ && mv statelib_all_1_sur_2/statelib2 ./ && cp -r statelib2 statelib
+=>on a deux folders statelib et statelib2 copies conformes aux regles precises(repliques memes..)
+=>cd statelib && patch -p1 < ../patch.print_ => repercussions sur statelib
+avant: rm CMakeLists.txt (###) && mv CMakeLists.txt.orig CMakeLists.txt (voir patch.print_ et bien l'inspecter(-)).
+PUIS: on revient vers le repertoir parent, on fait::
+diff -rupN statelib statelib2 > new_patch && cd statelib && patch -p1 < ../new_patch
+=>ca va se repercuter direct car nous qu'on a bien GENERE LE OWN PATCH '$$file$$'````.
+=>applications directs du patch.print_ sans erreurs sur statelib en passant par une copie intermediaire<=>ouverture en PLUS vers l'objet des exercices SUIVANTS(l'avant dernier en PARTICULIER).
+RQ: .rej nous sauve la vie si il y en pas ; on respecte les conventions c'est statelib2 ou on doit appliquer ceci on le fait puis on fait les modifs. sur les *.txt?orig puis on genere un nouveau patch depuis statelib(old) pour l'appliquer a celui ci et avoir LA VERSION COURANTE QUI MARCHE A PLEIN REGIME.//
+RQ2: on pourrait se restreindre a appliquer le patch patch.print_ a statelib2 et avoir une nouvelle version optimisee de statelib2 (~#~#)  a partir du fichier patch tout en gardant statelib intact en faisant les bonnes modifications apres.(-p1 impose implicitement cela mais cest mieux que de se melanger les pinceux avec une application BRUTE(deconseillee meme pour les plus grands developpeurs)) ON REFAIT UN git clone apres avoir cree le folder statelib_2_sur_2 pour avoir la version statelib pour la derniere partie du TD (sans build eventuellement pour le qt-creator(deja fait) et sans les modifs. de patch.print_ car pas demandees avant).
 */*/
 **********************************************************************************************
 **********************************************************************************************
@@ -204,7 +208,7 @@ EXO11:(le coeur de l'histoire)
 **********************************************************************************************
 **********************************************************************************************
 **********************************************************************************************
-EXO12: qtcreator avec build-statelib-Desktop-Debug ouvre avec la copie depuis statelib_all_1_sur_2''(()) => changement pris en compte avec save puis modification de la branche locale de ce repertoir inclut diff (pas necessairement git) puis tools(outils) puis depot local(local repository) diff (on l'a fait c'est l'essentiel) affiche tout bien en graphique. 
+EXO12: qtcreator avec build-statelib-Desktop-Debug ouvre avec la copie depuis statelib_all_1_sur_2''(()) => changement pris en compte avec save puis modification de la branche locale de ce repertoir inclut diff (pas necessairement git) puis tools(outils) puis depot local(local repository) diff (on l'a fait c'est l'essentiel) affiche tout bien en graphique.[revoir les explications precedentes pour plus de manips. internes consolées en mode NO]./////////////
 
 
 
