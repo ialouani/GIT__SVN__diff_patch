@@ -13340,6 +13340,7 @@ diff -rupN statelib/demos/search_number__game.c statelib_new/demos/search_number
 +  state_free(machine);
 +  return 0;
 +}
+Les fichiers binaires statelib/.git/index et statelib_new/.git/index sont différents
 diff -rupN statelib/src/state.c statelib_new/src/state.c
 --- statelib/src/state.c	2022-04-27 21:54:08.886836762 +0000
 +++ statelib_new/src/state.c	2022-04-27 22:53:10.430975085 +0000
