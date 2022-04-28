@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/statelib_all_2_sur_2/statelib/src/state.c
+state.h
+/home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/statelib_all_2_sur_2/statelib/src/state.h
+stdlib.h
+-
+execinfo.h
+-
+stdio.h
+-
+string.h
+-
+
+/home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/statelib_all_2_sur_2/statelib/src/state.h
+

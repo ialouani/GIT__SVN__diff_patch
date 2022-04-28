@@ -1,0 +1,5 @@
+/home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/build-statelib-Desktop-Debug2/demos/CMakeFiles/basic.dir
+/home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/build-statelib-Desktop-Debug2/demos/CMakeFiles/demo_menu.dir
+/home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/build-statelib-Desktop-Debug2/doc/CMakeFiles/doc.dir
+/home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/build-statelib-Desktop-Debug2/CMakeFiles/state.dir
+/home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/build-statelib-Desktop-Debug2/CMakeFiles/state_static.dir
