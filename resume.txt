@@ -223,7 +223,29 @@ index 6c9b78b..93996d5 100644
 depuis l'ajout a partir jusqu'a rslt affichage entre 2les @ @ puis
 diff --git a/resume.txt avec b/µ.txt qui correspond a l'applicationde diff suivant le systeme en cours git (diff --git(--long moyen memnotechnique)) puis -- sur a/resume.txt ( ;; ) potentiellement en cours en traitement car deja modifie et le new: +++ ;; b/resume.txt bien SUR.//
 ***********************************************DEBUT ULTIME DE LA SIMULATION POST A PLUSIEURS()::
->
+>c'est un monde: git.
+>>debut simulation(voir les images .jpeg dans le repository).
+>>>IMPORTANT A SAVOIR: dans le local il y a: HEAD et master une divergence entrainerait par exemple l'application+les resultats suivant:
+git checkout B => A B (HEAD) -C(MASTER) puis un git commit -m -a ajout fichier(!!) entrainerait:
+A B                                 -C (MASTER)
+   fleche (-45°) D HEAD (commit D at this point B ---()current_point)
+TOUT CELA CONTRAIREMENT A : git reset --hard HEAD~1..HEAD <=> git reset --hard HEAD^ <=> .. && git rset --hard HEAD^2 puis git reset --hard HEAD.
+pas de divergence la deuxieme oui gitg permet de voir cela(travail en groupe)
+=>=><-><->CAR:
+             On travaille actuellement sur D qui est une branche(<=>~nouvelle version) depuis B (HEAD) car checkout B puis un commit at this point (D:HEAD) reste le -C (MASTER) tout a droite dans les deux dessins car on a sauvegardé les modifications depuis un git clone et git branch (affiche les branches) puis une modification entrainerait B branche de travail HEAD et C master mais un git checkout B pour git commit va faire D(HEAD::: NOUVELLE BRANCHE DE REVISION MAIS elle est pas puissante dans cet manip. reste en HEAD depuis B (branche DE TRAVAIL d'avant on remonte a B apres git clone git branch puis git checkout revision0 (comme svn, on remonte a la branche precedente))) et donc le dession 1 devient le dessin2 (ca reste sur HEAD car depuis B => transfert de nom car nouvelle revision(execution de git commit)) et -C(MASTER) reste bien evidemment.
+>SIMULATION A DEUX:(sans fichier shell pour s'entrainer sur 3 lignes de points de vues!!:::):>>> ce qu'il faut retenir d'avant c'est que les nouveaux AJOUTS ne seront pas suivant: -C(HEAD/MASTER) mais depuis B (on remonte) D(HEAD)--queHEAD////.mais git reset FAIT:
+HEAD/MASTER=>MASTER(inverse d'un commit) quand on dit HEAD/MASTER cad.(comme svn////trunks) MASTER constante (nom de reference) augmente de HEAD.
+RQ TRES TOP(deja sous ligne virtuel reapparition)::
+pour supprimer et communiquer il faut faire:(on peut voir si c'est difficile A,B,C,D comme des numeros de revision et que COMME DANS svc (subversion--) git checkout est un basculement entre branches(git branch)<=>entre revisions car cela concerne que (HEAD) et -(MASTER))
+rm file.?* ou rm file.*
+puis git status entraine fichier non suivi
+puis git rm ce_fichier entraine la publication limitee en locale de la suppression du fichier
+puis git add *
+puis git status: supprime:: ..
+puis git commit/git status/git push APRES&(²).
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
 
 
 
