@@ -160,42 +160,70 @@ EXO10/11:
 facile;; resume rapide:->
 /*/*
  (DOING THE 1/2 job from now).from commiting and being updating each time oberserved.
-
-
-
+=>statelib nouveau deja applique le patch precedent visant ainclure la fonctionnalitee de print states..
+=>puis on applique le nouveau patch_end sur (-P1) copie de statelib'' statelib2 depuis 
+...on a perdu le file un rm -rf * a tout saute.. (rm -r previent au moins dans le cas d'un repository git)
+ON REPREND l'entier exo8:
+on copie statelib2 depuis le diff applique a statelib dans les sous-folders<=>il y a tout : l'externe et l'interne.
+on fait un diff -rupN (apres avoir modifie le cmakelists la version 2.8.11 sinon ca va nous gonfler..) puis cd statelib puis patch -p1 < ../patch_end2 puis cd .. puis diff -r -x . git -x build statelib statelib2 ou l'inverse <=> RIEN donc tout a ete repertorie tout avant<<<< depuis git clone brut et modification de la version: cmake_minimum_required (VERSION 2.8.11) puis diff -rupN apres copie dans le repertoir git personnel puis application du patch dedans avec l'entree standard sur le correcting ; à savoir: patch_end2 et puis mv patch_end ./others(fausse commande d'inattention('s..)) entrainant tout ceci mais c'est mieux.
+=>C'EATIT L'OBEJT DE L'EXO9.
+L'exo 10: 
+rq: le statelib2 est une copie de statelin_all_1_sur_2/statelib_new2 puis rennomage en statelib2.MAIS NE COMPREND PAS l'ajout juste les internes. DONC: pour faire cela::
+application apres git clone du patch patch.print_ + correction limitee puis generation du patch_end2 NOUVEAU depuis statelib_all_1_sur_2 puis rapatriememnt+renommage (../statelib_new) puis generation avecdiff -rupN -x .git -x build (modification evrsion cmakelists.txt principale evidemment(reorganisations des sources BIEN SUR)) => ca fait que doit faire sur le statelib uniquement un truc de plus dans statelib par exemple l'applciation de patch.print_ precedent pour avoir state printfs qui est pas dans le new ne va etre dans les notifications ci-dessus(terminal sortie) bien sur=>l'application de patch_end2 par exemple dans ce contexte va rapatrier demos/2files--games-- && updating cmakelists.txt dansdemos pour en prendre compte mais la non existence dans statelib2 par exemple de (statelib_new2 depuis 1/2) de state printfs on s'en fiche car nous ON DOIT SAVOIR CE QU'ON DOIT AJOUTER DANS STATELIB POUR AVOIR LE MANQUE PAR RAPPORT A STATELIB2 CEST ADIRE RAPATRIER LES NOUVEAUX LIGNES MANQUANTES DANS STATELIB PAR RAPPORT A STATELIB2 <=> ce que fait la commande diff -r -x .git (long sequence string (LCS) word).
+RESULTAT:***************************************
+EXO_=9:: l'application de patch.print_ nous a donne le resultat (state printfs..///) puis diff -rupN -x .git de statelib_1_sur_2/statelib_new2 apres mv dans le personal repository sortie vers patch_end2 puis cd statelib puis patch -p1 < ../patch_end2 pour rapatrier nos games et updater les cmakelists notamment celui dans demos (ou les executables vont se retrouver) evidemment.
+DIFF/PATCH:
+ATTENTION: -x .git -x .build<=>supprimer les build puis -p1 < ../ depuis ou on va appliquer le patch(STATELIB_OLD dans ce contexte) meme si parfois on doit aller loin car ce n'est pas efficace par exemple un .orig pa un .rej genere implique rm CMAKELISTS ET MV *.orig* CMAKELISTS.txt (.txt dans le premier lui-AUSSI.).///////////////////////////.  
+EXO9: fait et commente apres.
+EXO10: git status puis git commit -a -m "ordre:!!" permet de communiquer les modifications et les encapsuler en comments localement.(les fichiers uniquement pas ajoutes en entier par exemple une modification d'un FICHIER DANS UN GROUPE DEJA RETROUVE APRES REQUESTING COMMUNICATION JUST IN TIME+.) puis git add demos/(2) puis git status devient en vert (fichiers suivis) puis git commit puis ecrire puis cx cs puis entree enregistre le commit EDITMSG. REMARQUES IMPORTANTES: l'application de cela va faire l'encapsulation des fichier en cours(suivis) donc ca va afficher : create mode .. && create mode .. (2 jeux).//()/
+[master 9a0afb8] personal added games in applying statelib library uniquely.
+--message de git commit |!! sortie((--))///////////////////.////² encapsulation maintenant en COURS(nouvelle revision via master et son mini-local-code:: master: 9a0afb8 qui CORRESPOND a une adresse dans le lien client->serveur(pas virtuel).
+avant: (revision precedente(decentralise PRINCIPE))
+[master eb34d89] new updated modifications not online but in local working directory
+ 5 files changed, 50 insertions(+), 1 deletion(-)
+ le 1. correpond a tout.
+ La revision courante(la derniere2) ecrase l'avant derniere en la plcant dans un nouveau block sans chainage(principe d'encapsulation entrainee ou comme avant (2 files changed) embarquee d'avant(pas d'adresse client-serveur au debut))).////2
+ =>pas de git push car il faut le jeton pris d'acces qui appartient au proprietaire(principe des git repositories de github).
 /*/*
-EXO11:(le coeur de l'histoire)
+---------*******************__________________*****************************************************************************
+                            EXO11:(le coeur de l'histoire)
+git status apres tout cela affiche que :
+Sur la branche master(pas origin/master thor pas nouveau master:master sur github)
+Votre branche est en avance sur 'origin/master'(et voila!!!!) de 2 commits.
+<=>cad. que la soi-disant origin/master avant publication et doit etre publiees(modifications) et en avance(depuis la branche master là!!!!) de 2 commits.
+C'est trivial now avec ces comments/++.////
+  (utilisez "git push" pour publier vos commits locaux)
+rien à valider, la copie de travail est propre.(en terme de local)
+[86]   Fini                    gedit resume.txt  (wd : ~/Bureau/TD6/GIT__SVN__diff_patch)
+(maintenant, wd : ~/Bureau/TD6/GIT__SVN__diff_patch/statelib)
+jobs 86 fini des une nouvelle commande apres fin commande precedente FINI commande puis depuis (wd: (working directory) peut varier/./....) puis maintenant (..) si resume.txt en question a fait des sauts entre des repertoirs. LE 1er correspond a resume.txt sur la meme ligne ou se trouve bien et le deuxieme ou on va faire nos prochaines verifications.
+=>car FILE.
+Sur la branche master
+Votre branche est en avance sur 'origin/master' de 2 commits.
+  (utilisez "git push" pour publier vos commits locaux)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+rien à valider, la copie de travail est propre
+si rien suivi dans le shell (pas bash(language d'interpretation)) car rien special que des commandes apres une..///
+*******************************DEBUT EXO11:
+(simulation car..///)
+***********************
+ULTIME RESUME SUR L'ENSEMBLE PRECEDENT:
+depuis transitoir folder(nouveau&éé trvail): 
+copie dans le repository puis application du patch qui integre les jeux en faisant:
+diff -rupN -x .git -x . build statelib_new(du tout debut) $1=cet avant dernier > patch_end
+=>patch_end va repertorier l'integration dans le statelib_new du nouveau state.c puis cd statelib_new puis patch -p1 < ../patch_end va faire en sorte que le nouveau statelib contient le + de la nouvelle fonction dans state.c/.HAUSSI mais pas necessaire pour le moment..
+=>application du patch_endd depuis diff -rupN -x .build -x .git statelib2_patched statelib inversement qui va repertorier dans statelib les nouveaux jeux sans se soucier du manque statlib2_patched des + (state printfs.).// depuis statelib avec l'option -p1 et la commande avec l'option precedente: patch -p1 < ../patch_endd.
+*************************************FIN EXOS PRECEDENTS.
+diff git -r donne:
+diff --git a/resume.txt b/resume.txt
+index 6c9b78b..93996d5 100644
+--- a/resume.txt
++++ b/resume.txt
+@@ -160,41 +160,60 @@ EXO10/11:
+depuis l'ajout a partir jusqu'a rslt affichage entre 2les @ @ puis
+diff --git a/resume.txt avec b/µ.txt qui correspond a l'applicationde diff suivant le systeme en cours git (diff --git(--long moyen memnotechnique)) puis -- sur a/resume.txt ( ;; ) potentiellement en cours en traitement car deja modifie et le new: +++ ;; b/resume.txt bien SUR.//
+***********************************************DEBUT ULTIME DE LA SIMULATION POST A PLUSIEURS()::
+>
 
 
 
@@ -208,7 +236,7 @@ EXO11:(le coeur de l'histoire)
 **********************************************************************************************
 **********************************************************************************************
 **********************************************************************************************
-EXO12: qtcreator avec build-statelib-Desktop-Debug ouvre avec la copie depuis statelib_all_1_sur_2''(()) => changement pris en compte avec save puis modification de la branche locale de ce repertoir inclut diff (pas necessairement git) puis tools(outils) puis depot local(local repository) diff (on l'a fait c'est l'essentiel) affiche tout bien en graphique.[revoir les explications precedentes pour plus de manips. internes consolées en mode NO]./////////////
+EXO12(important dans des contextes de travail en 2 genres(difficile pour le 2ieme genre)): qtcreator avec build-statelib-Desktop-Debug ouvre avec la copie depuis statelib_all_1_sur_2''(()) => changement pris en compte avec save puis modification de la branche locale de ce repertoir inclut diff (pas necessairement git) puis tools(outils) puis depot local(local repository) diff (on l'a fait c'est l'essentiel) affiche tout bien en graphique.[revoir les explications precedentes pour plus de manips. internes consolées en mode NO]./////////////
 
 
 
