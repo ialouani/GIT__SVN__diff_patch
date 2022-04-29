@@ -243,6 +243,8 @@ puis git rm ce_fichier entraine la publication limitee en locale de la suppressi
 puis git add *
 puis git status: supprime:: ..(rm 'top.txt')
 puis git commit/git status/git push APRES&(²).
+RQ2:
+(gestion des branches+others commandes..(apres))
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
