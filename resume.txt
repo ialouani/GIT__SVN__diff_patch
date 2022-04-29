@@ -273,6 +273,12 @@ puis pour ce git remote add le GG2 etant la commande principale virtuel d'acces;
 ***La possibilit ́e de transmettre ainsi des modifications entre utilisateurs sans pass ́e par un d ́epˆot central est ce qui caract ́erise les gestionnaires de sources d ́ecentralis ́es***
 LAST COMMENTS::
 ******************GESTION DE BRANCHES DANS GIT:
+git branch affiche les branches
+git checkout -b b2 (prefere)<=>git branch b2 pusi git checkout b2
+apres: on cree un fichier(ls affiche dorenavent le 'merge' car en groupe on veut etster avec les fonctions des autres donc un basculement aurait pour effet de rapatrier les sources vers la rbanche concernee ici) touch file.html
+PUIS: git add * git commit -m "testing.."
+PUIS: git push --set-upstream origin b2 ca cree la branche distance avec toutes les modifs ajoutees.
+sur github on a: This branch is 1 commit ahead of master. sur b2 car on a pas fait de merge un checkout masterpuis un ls n'affiche pas le fichier concernee(cette demarche evite de faire resauter les fichiers et reprendre des le debut..).
 
 
 
@@ -292,3 +298,4 @@ EXO12(important dans des contextes de travail en 2 genres(difficile pour le 2iem
 
 
 FIN TD_6.
+
