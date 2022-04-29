@@ -250,10 +250,29 @@ EN GROS:
 git switch - depuis une branche revient a la branche master.
 VOIR PLUTOT LA PARTIE-DUCOURSPOUR CELA. 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-
-
+ETAPES BIEN PRECISES:
+dans un autre terminal, on tape:
+(successivement):::
+mkdir tout2 
+cd tout2
+git clone https://github.com/allali/statelib
+cd statelib
+pwd dans l'autre terminal depuis statelib puis on retape dans l'autre terminal:
+a-git remote add GG2 file:///home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/statelib
+b-git pull GG2 master
+ls=>on voit sur $( ls demos/ ) les nouveaux ajoutés.
+apermet DE relocaliser le depot d'origine
+la deuxieme B permet d'envoyer nos modifs aux autres users.
+ET VOILA! tout simple!!
+REPRISE RAPIDE:(+last comments)
+On cree pour simuler un repertoir tout2 dans lequel on clone le repertoir d'origine nomme: statelib avec git clone.. PUIS on se met dans statelib on fait les commandes suiavntes:
+git remote add GG2 file:///home/ubuntu20/Bureau/TD6/GIT__SVN__diff_patch/statelib
+git pull GG2 master
+ca cree un espace de commandes virtuel pour recevoir GG2 depuis le file:///<chemin vers notre statelib patché deux fois>
+puis pour ce git remote add le GG2 etant la commande principale virtuel d'acces; on fait Unn git pull GG2 master ca repertorie les modifications depuis le GG2 'virtuel' vers la branche master actuelle de statelib_old => cela permet de repertorier les modifs sans passer du tout par un serveur distant <=> propriete de git: repose sur la decentralisation en terme de gestion de sources.
+***La possibilit ́e de transmettre ainsi des modifications entre utilisateurs sans pass ́e par un d ́epˆot central est ce qui caract ́erise les gestionnaires de sources d ́ecentralis ́es***
+LAST COMMENTS::
+******************GESTION DE BRANCHES DANS GIT:
 
 
 
