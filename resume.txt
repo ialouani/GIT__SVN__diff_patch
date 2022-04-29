@@ -306,6 +306,13 @@ A2-amend:
 renommer un commit avant git push..
 A3-rien:
 FIN DES EXOS DE LA PARTIE3.(reste ce dernier deja fait tout avant><<).////////////
+travail EN COURS:
+Un git push de ceci depuis la branche master affiche:  This branch is 1 commit behind master. 
+dans b2 dans github ce qui est normal carb2 n'a pas encore recu les modifs on fait un git checkout b2 puis un git merge master pour recevoir les modifs. verifiees et la on peut travailler ou bien RETRAVAILLER sereinement sur notre espace local de travail et rebolotte la meme PROCEDURE APRES.
+resume_others; git commmit --amend(renommer avant git push un commit precedent)/git revert>git reset --hard HEAD~2..HEAD(> car ca va creer un patch reverse et faire le boulot ainsi on peut remonter difficielement pas comme git reset qui reinitialise sans patch et laisse l'utilisateur gerer cette nouvelle revision)/git stash (git checkout git remote -v (fetch/origin)..adressages pas importants (voir avant).... et git resetvs.git checkout voir fichier *.jpeg) qui annule les fichiers suivis en cours et remet le ligne au depart (si on la modelise en incrementation).
+FIN_FIN__TD"6".
+
+
 **********************************************************************************************
 **********************************************************************************************
 **********************************************************************************************
@@ -322,3 +329,18 @@ EXO12(important dans des contextes de travail en 2 genres(difficile pour le 2iem
 
 FIN TD_6.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.////////////////////////////////////////////////////////////////////
