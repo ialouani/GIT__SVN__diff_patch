@@ -237,11 +237,11 @@ pas de divergence la deuxieme oui gitg permet de voir cela(travail en groupe)
 HEAD/MASTER=>MASTER(inverse d'un commit) quand on dit HEAD/MASTER cad.(comme svn////trunks) MASTER constante (nom de reference) augmente de HEAD.
 RQ TRES TOP(deja sous ligne virtuel reapparition)::
 pour supprimer et communiquer il faut faire:(on peut voir si c'est difficile A,B,C,D comme des numeros de revision et que COMME DANS svc (subversion--) git checkout est un basculement entre branches(git branch)<=>entre revisions car cela concerne que (HEAD) et -(MASTER))
-rm file.?* ou rm file.*
+rm file.?* ou rm file.* (deja en distanciel PRESENT (travail en groupe par exemple//DEBUT SIMULATION...))
 puis git status entraine fichier non suivi
 puis git rm ce_fichier entraine la publication limitee en locale de la suppression du fichier
 puis git add *
-puis git status: supprime:: ..
+puis git status: supprime:: ..(rm 'top.txt')
 puis git commit/git status/git push APRES&(²).
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
