@@ -279,10 +279,33 @@ apres: on cree un fichier(ls affiche dorenavent le 'merge' car en groupe on veut
 PUIS: git add * git commit -m "testing.."
 PUIS: git push --set-upstream origin b2 ca cree la branche distance avec toutes les modifs ajoutees.
 sur github on a: This branch is 1 commit ahead of master. sur b2 car on a pas fait de merge un checkout masterpuis un ls n'affiche pas le fichier concernee(cette demarche evite de faire resauter les fichiers et reprendre des le debut..).
-
-
-
-
+on bascule sur master avec git checkout master pour que la branche principale contient nos propres developpement(voir ajout(!! !!)) sur notre propre branche de developpement. On fait un git merge b2 et tout est repertorie dans MASTER maintenant.
+CE QUI FAUT RETENIR:
+la creation d'une branche rapatrie les sources vers la branche concernee.
+un commit depuis la branche et la prise en compte distancielle avec git push --set-upstream origin <nom_branche> va faire la creation distancielle de la branche avec les nouveaux ajouts.
+un git checkout master puis un ls ne va rien voir il faut apres verification faire un git merge <nom_branche> puis git add *
+git commit -m ".."
+git push ainsi la branche master contiendra toutes les modifs/ajouts-- de b2 apres bien sur basculement sur master.
+-pour supprimer une branche distanciellement:
+(le commit concernee depuis la banche b2 dans l'exemple de notre depot de TD6)
+git branch(tjrs) flags: -d b2 (par exemple pour la branche b2)
+et distanciellement;::(tres dangereuse) git push origin --delete b2 (par exemple).
+AUTRES COMMANDES:
+git stash: remiser les modifications d'un repertoire sale(dangereuse aussi).
+<=>La commande enregistre vos modifications locales et rétablit le répertoire de travail pour qu'il corresponde au commit HEAD
+2/derniere commande:
+git remote -v (all affichage fetch master(_NEW dans le feuilletage des commandes de allali))
+git remote pour afficher les eventuelles options.
+git reset vs. git checkout(plus sur les branches))
+reste: le flag amend(git reset reinitialise a la version precedente facile a MANIER) et git revert::
+GIT REVERT / FLAG AMEND::
+>git stash/revert/commit --amend....
+A1-GIT revert:
+Utilisation de git revert pour revenir à un commit précédent dans le référentiel Git. La commande git revert est utilisée lorsque l'on souhaite conserver l'historique du dépôt. Lors de l'exécution de la commande git revert , Git crée un commit avec le patch reverse pour annuler le commit précédent. (git reset reinitialise tout localement et donne la main a l'user mais git revert, il y un nouveau commit avec un patch reverse pour annuler le commit precedent <<<< git reset)
+A2-amend:
+renommer un commit avant git push..
+A3-rien:
+FIN DES EXOS DE LA PARTIE3.(reste ce dernier deja fait tout avant><<).////////////
 **********************************************************************************************
 **********************************************************************************************
 **********************************************************************************************
