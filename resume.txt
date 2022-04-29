@@ -245,6 +245,10 @@ puis git status: supprime:: ..(rm 'top.txt')
 puis git commit/git status/git push APRES&(²).
 RQ2:
 (gestion des branches+others commandes..(apres))
+git push --force si probleme lors du push(ecrase la version precedente)
+EN GROS:
+git switch - depuis une branche revient a la branche master.
+VOIR PLUTOT LA PARTIE-DUCOURSPOUR CELA. 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
